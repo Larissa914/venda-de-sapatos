@@ -40,6 +40,19 @@
             bottom: 0;
             width: 100%;
         }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 <body>
@@ -55,16 +68,19 @@
                 <h3>Sapato Social</h3>
                 <p>Elegância e conforto para seu dia a dia.</p>
                 <p>Preço: R$ 199,90</p>
+                <button onclick="adicionarAoCarrinho('Sapato Social', 199.90)">Comprar</button>
             </li>
             <li>
                 <h3>Tênis Esportivo</h3>
                 <p>Perfeito para atividades físicas e momentos casuais.</p>
                 <p>Preço: R$ 249,90</p>
+                <button onclick="adicionarAoCarrinho('Tênis Esportivo', 249.90)">Comprar</button>
             </li>
             <li>
                 <h3>Sapato Casual</h3>
                 <p>Ideal para um look moderno e despojado.</p>
                 <p>Preço: R$ 179,90</p>
+                <button onclick="adicionarAoCarrinho('Sapato Casual', 179.90)">Comprar</button>
             </li>
         </ul>
     </section>
@@ -73,5 +89,11 @@
         <p>&copy; 2025 Loja de Sapatos. Todos os direitos reservados.</p>
         <p>Contato: contato@lojadesapatos.com</p>
     </footer>
+    
+    <script>
+        function adicionarAoCarrinho(produto, preco) {
+            alert(produto + ' adicionado ao carrinho por R$ ' + preco.toFixed(2));
+        }
+    </script>
 </body>
 </html>
